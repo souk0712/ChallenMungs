@@ -1,9 +1,3 @@
-package com.ssafy.ChallenMungs.common.config;
-
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebMvcConfig implements WebMvcConfigurer {
-    //
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad3145f9518754877577b3c7f653280efc687d209e46766fec5671d7e236679e
+size 795
