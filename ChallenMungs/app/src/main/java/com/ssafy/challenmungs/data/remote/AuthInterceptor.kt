@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fe4d29cae95db849fd74fffa71142e7c97c40e61a08c2acfe9ec63611c37e219
-size 495
+package com.ssafy.challenmungs.data.remote
+
+import com.ssafy.challenmungs.data.local.datasource.SharedPreferences
+import okhttp3.Interceptor
+import okhttp3.Response
+
+class AuthInterceptor(private val preferences: SharedPreferences) : Interceptor {
+    override fun intercept(chain: Interceptor.Chain): Response {
+        val request = chain.request().newBuilder()
+            .addHeader("Authorization", "bearer " + preferences.accessToken).build()
+
+        return chain.proceed(request)
+    }
+}
