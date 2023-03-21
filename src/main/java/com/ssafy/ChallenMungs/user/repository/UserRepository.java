@@ -1,11 +1,3 @@
-package com.ssafy.ChallenMungs.user.repository;
-
-import com.ssafy.ChallenMungs.user.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.querydsl.QuerydslPredicateExecutor;
-
-public interface UserRepository extends JpaRepository<User, Long>, QuerydslPredicateExecutor<User> {
-    int countByLoginId(String str);
-    User findUserByLoginId(String loginId);
-    void deleteUserByLoginId(String loginId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4e2ab3ba7422a234032736c9f006c526aedd8b8355e41d59e347801b7b18afc0
+size 517
