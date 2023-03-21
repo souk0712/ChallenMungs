@@ -1,17 +1,3 @@
-package com.ssafy.challenmungs
-
-import android.app.Application
-import com.ssafy.challenmungs.data.local.datasource.SharedPreferences
-import dagger.hilt.android.HiltAndroidApp
-
-@HiltAndroidApp
-class ApplicationClass : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        preferences = SharedPreferences(applicationContext)
-    }
-
-    companion object {
-        lateinit var preferences: SharedPreferences
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:90a384977177343dacaf62b84af3d6b5c225394aa7d11205f5d8f9d8e0b9c4c7
+size 701
