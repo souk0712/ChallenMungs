@@ -1,11 +1,3 @@
-<resources>
-    <string name="app_name">ChallenMungs</string>
-
-    <!-- Bottom Menu -->
-    <string name="title_tab_challenge">챌린지</string>
-    <string name="title_tab_donate">기부</string>
-    <string name="title_tab_home">홈</string>
-    <string name="title_tab_map">정보</string>
-    <string name="title_tab_my_page">마이페이지</string>
-    <string name="image_menu">하단 메뉴의 이미지입니다.</string>
-</resources>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb97911f6f415430e08b0c88a9ea41587cdecdaa847b29685eb939390b892ea4
+size 657
