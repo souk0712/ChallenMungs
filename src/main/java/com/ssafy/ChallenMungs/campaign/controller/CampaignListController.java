@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ad59a40b50bb979efc5d6ae0f2dbfb918e664236c377337a4c015118fc2af267
-size 93
+package com.ssafy.ChallenMungs.campaign.controller;
+
+public class CampaignListController {
+    //todo 각종 옵션에 따라 캠페인 리스트를 반환하는 api
+    //todo 보호소 화면에서 자신의 캠페인 리스트를 보여주는 api
+    //2개가 필수 구현이고 나머지(내가 좋아요한 캠페인 등)는 적당히 추가해주세요
+    
+}
