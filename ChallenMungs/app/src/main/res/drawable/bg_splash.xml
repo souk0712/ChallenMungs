@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:de359dc7b06858454ccfa356c833612c966fc0c7aa5ed9b9f74ef6a8761e19ec
-size 261
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/fair_pink" />
+    <item
+        android:drawable="@drawable/ic_logo_basic"
+        android:gravity="center" />
+</layer-list>
