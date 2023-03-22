@@ -1,3 +1,21 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34dddef912f13fd86e7a767a7ef16c6f14423ff050600adecd09f1629b02b487
-size 472
+package com.ssafy.ChallenMungs.Test.entity;
+
+import lombok.*;
+import com.ssafy.ChallenMungs.user.entity.User;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name="Test")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Test {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+}
