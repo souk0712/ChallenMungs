@@ -1,19 +1,3 @@
-package com.ssafy.challenmungs.common.util
-
-import android.content.Context
-
-fun Int.dp(context: Context): Int {
-    return (this / context.resources.displayMetrics.density).toInt()
-}
-
-fun Int.px(context: Context): Int {
-    return (this * context.resources.displayMetrics.density).toInt()
-}
-
-fun getDeviceWidthPx(context: Context): Int {
-    return context.resources.displayMetrics.widthPixels
-}
-
-fun getDeviceHeightPx(context: Context): Int {
-    return context.resources.displayMetrics.heightPixels
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:35172e59d5ab0b0f57158aaf2f5133102b7f50339b7216c581a34d145746481c
+size 2658
