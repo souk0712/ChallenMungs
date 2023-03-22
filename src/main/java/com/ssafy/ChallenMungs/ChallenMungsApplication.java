@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5eea67a0ca9828dd2320fb0c97042ac40340ea79677aabea080654d910d7760d
-size 327
+package com.ssafy.ChallenMungs;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ChallenMungsApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ChallenMungsApplication.class, args);
+	}
+
+}
