@@ -1,14 +1,3 @@
-package com.ssafy.challenmungs.presentation
-
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import com.ssafy.challenmungs.R
-import dagger.hilt.android.AndroidEntryPoint
-
-@AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71f2782f8a31314e2bf8d618eb42b53e2b28dc5016bcdc30716e884cbc1276b7
+size 3157
