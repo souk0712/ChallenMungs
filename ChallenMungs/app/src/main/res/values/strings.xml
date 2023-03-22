@@ -1,8 +1,3 @@
-<resources>
-    <string name="app_name">ChallenMungs</string>
-
-    <!-- Log In -->
-    <string name="title_shelter_auth">후원처이신가요?</string>
-    <string name="content_shelter_join">회원가입</string>
-    <string name="content_shelter_login">로그인</string>
-</resources>
+version https://git-lfs.github.com/spec/v1
+oid sha256:63066246c1363384b6646fa854ddb68d8327d8d664d61a17f1e51302e22548e7
+size 1482
