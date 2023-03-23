@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e8f90bb25ecec93ea09724b0eef8e5c0d9473cdf7dc6b0d6012d91bbe627cc88
-size 441
+package com.ssafy.ChallenMungs.campaign.dto;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.*;
+
+import java.util.List;
+
+@Getter
+@Setter
+@AllArgsConstructor
+//캠페인을 집어넣는데에 필요한 정보들을 담은 dto입니다.
+public class CampaignInsertDto {
+    String title;
+    String loginId;
+    String thumbnail;
+    int targetAmount;
+    List<ContentDto> contentList;
+}
