@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:34eb09cf2171289454702583a34bd714ad656f28908a29efdcf97d608572d677
-size 388
+package com.ssafy.ChallenMungs.challenge.panel.entity;
+
+import com.ssafy.ChallenMungs.challenge.commonEntity.Challenge;
+import lombok.*;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+@Entity(name = "panel")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Panel extends Challenge {
+    @Column(name = "game_type")
+    String gameType;
+
+}
