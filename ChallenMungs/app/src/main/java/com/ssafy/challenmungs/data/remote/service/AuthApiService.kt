@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5a91b41967c5c3b0a89726452a10642b83630a17e51b1f9d073c5279372e6715
-size 334
+package com.ssafy.challenmungs.data.remote.service
+
+import com.ssafy.challenmungs.data.remote.datasource.auth.LogInResponse
+import okhttp3.RequestBody
+import retrofit2.http.Body
+import retrofit2.http.POST
+
+interface AuthApiService {
+
+    @POST("/user/kakaoLogin")
+    suspend fun requestLogin(@Body body: RequestBody): LogInResponse
+}

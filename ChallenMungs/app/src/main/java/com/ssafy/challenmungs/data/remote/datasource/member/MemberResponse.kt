@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0f8b967b517704f2740b4c52f74ebc77842b3b3d220c47959c54b68004da29db
-size 489
+package com.ssafy.challenmungs.data.remote.datasource.member
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.member.Member
+
+data class MemberResponse(
+    @SerializedName("profile")
+    val profile: String?,
+    @SerializedName("name")
+    val name: String,
+): DataToDomainMapper<Member>{
+
+    override fun toDomainModel(): Member =
+        Member(profile, name)
+}
