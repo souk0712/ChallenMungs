@@ -1,15 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.general.controller;
-
-import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@RequestMapping("/general")
-@CrossOrigin("*")
-@Api(value = "generalChallenge", description = "일반챌린지를 관리하는 컨트롤러에요!")
-public class GeneralController {
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9841c820fb434e10717ffe118acfc4f979609f0737e5319509990212e044753
+size 2422
