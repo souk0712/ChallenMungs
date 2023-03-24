@@ -1,12 +1,3 @@
-package com.ssafy.ChallenMungs.place.service;
-
-import com.ssafy.ChallenMungs.place.entity.Place;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-
-import java.util.List;
-
-public interface PlaceService {
-    Page<Place> getPlace(Pageable pageable, List<String> cities, String type);
-//    Page<Place> pagingList(Pageable pageable);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbd05a958578cb6357d6c5299d803ea7fb44685a5afb07bb7c9029895e5c7474
+size 378
