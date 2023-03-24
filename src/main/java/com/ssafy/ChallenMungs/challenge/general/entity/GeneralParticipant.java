@@ -1,25 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.general.entity;
-
-import lombok.*;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
-@Entity(name="general_participant")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class GeneralParticipant {
-    @Id
-    @Column(name = "login_id")
-    String loginId;
-
-    @Column(name = "challenge_id")
-    int challengeId;
-
-    @Column(name = "success_count")
-    int successCount;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:86714b4b9acf67d664c968b66fd989d3b3ae25b88f9669503f58c7fbd475069a
+size 483
