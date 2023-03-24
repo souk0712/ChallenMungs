@@ -1,30 +1,3 @@
-package com.ssafy.ChallenMungs.campaign.entity;
-
-
-
-import lombok.*;
-
-import javax.persistence.*;
-
-@Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class Comment {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int commentId;
-
-    @ManyToOne
-    @JoinColumn(name="campaign_id")
-    private Campaign campaign;
-
-    @Column(name = "writer")
-    private String writer;
-    @Column(name = "msg")
-    private String msg;
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef8e1968519cda5863627c505fd9e8bbf32691460408bd81fbf18997b80fc6e2
+size 478
