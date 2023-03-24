@@ -1,7 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.service;
-
-public interface WalletService {
-    void insertNomalWallet(String piggyBank,String wallet,String loginId);
-    void insertSpecialWallet(String campaign1, String campaign2,String loginId);
-    void deleteTest(String loginId);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8756f1a02493d55cf225185a9c887708a5c5a121203a23ed2c826af7a8d5599
+size 280
