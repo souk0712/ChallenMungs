@@ -1,17 +1,3 @@
-package com.ssafy.ChallenMungs.place.repository;
-
-import com.ssafy.ChallenMungs.place.entity.Place;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface PlaceRepository extends JpaRepository<Place, Long> {
-    // 지역 & 유형 선택
-    List<Place> findByCityInAndType(List cities, String type);
-
-    List<Place> findByCityIn(List cities);
-
-    List<Place> findByType(String type);
-
-//    List<Place> findAll(List cities, String type);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4a0cd90c1c7499da9aebabc4dfc4dbce0322270a93b53190c5b44eb040db449f
+size 688
