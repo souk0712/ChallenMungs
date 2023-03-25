@@ -1,7 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@color/fair_pink" />
-    <item
-        android:drawable="@drawable/ic_logo_basic"
-        android:gravity="center" />
-</layer-list>
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad327570f03a497e794f372a3e920ed37742f7d1d069a25715a2b2e4356433e0
+size 270
