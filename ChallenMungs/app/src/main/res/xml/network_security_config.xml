@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9178e22a50e0ecddf5ff55e7a92ff6fc2912cbeaead16871b121ec3498a25b0a
-size 234
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">j8d2101.p.ssafy.io</domain>
+    </domain-config>
+</network-security-config>
