@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:895ce2f97a8bc0a157efdc15f8167b0c2b7a7ccdbd4eb50b88436ee4a159a541
-size 386
+package com.ssafy.challenmungs.presentation.mypage
+
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class EditProfileViewModel : ViewModel() {
+
+    private val _profileImgUrl: MutableLiveData<String?> = MutableLiveData()
+    val profileImgUrl: MutableLiveData<String?> = _profileImgUrl
+
+    fun getInfo() {
+        // 사용자 정보 가져오기
+    }
+}
