@@ -1,10 +1,10 @@
 package com.ssafy.challenmungs.presentation.mypage
 
 import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentMyPageBinding
+import com.ssafy.challenmungs.databinding.FragmentMyWalletBinding
 import com.ssafy.challenmungs.presentation.base.BaseFragment
 
-class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_page) {
+class MyWalletFragment : BaseFragment<FragmentMyWalletBinding>(R.layout.fragment_my_wallet) {
 
     override fun initView() {
 
