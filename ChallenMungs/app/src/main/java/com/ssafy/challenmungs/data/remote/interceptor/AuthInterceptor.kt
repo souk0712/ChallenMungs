@@ -1,4 +1,4 @@
-package com.ssafy.challenmungs.data.remote
+package com.ssafy.challenmungs.data.remote.interceptor
 
 import com.ssafy.challenmungs.data.local.datasource.SharedPreferences
 import okhttp3.Interceptor
