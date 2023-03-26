@@ -1,16 +1,3 @@
-package com.ssafy.challenmungs.data.local.datasource
-
-import android.content.Context
-
-class SharedPreferences(context: Context) {
-
-    private val prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
-
-    var accessToken: String?
-        get() = prefs.getString("accessToken", null)
-        set(value) = prefs.edit().putString("accessToken", value).apply()
-
-    fun clearPreferences() {
-        prefs.edit().clear().apply()
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:38c4cdbd1662bf428b9c93e6cc0aa6aae215ad677d90683f3bbf559f37d9d364
+size 619
