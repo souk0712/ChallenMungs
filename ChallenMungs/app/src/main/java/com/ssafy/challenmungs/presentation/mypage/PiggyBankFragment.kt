@@ -1,12 +1,3 @@
-package com.ssafy.challenmungs.presentation.mypage
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentPiggyBankBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-
-class PiggyBankFragment : BaseFragment<FragmentPiggyBankBinding>(R.layout.fragment_piggy_bank) {
-
-    override fun initView() {
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a394b93a9974e094caefc4ec48737a9f885c6704309dd91587a741c34f5dfd6
+size 692
