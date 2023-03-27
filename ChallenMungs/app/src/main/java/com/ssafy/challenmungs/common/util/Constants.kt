@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5761662f37d28ebc1da5ebfdfb7bc71c8ce97dac01c671fa309db78ee2ece7ed
-size 120
+package com.ssafy.challenmungs.common.util
+
+object Constants {
+    const val BASE_URL="http://j8d2101.p.ssafy.io:8080"
+    const val KLAYTN_API_WALLET="https://wallet-api.klaytnapi.com"
+}
