@@ -1,13 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.general.service;
-
-import com.ssafy.ChallenMungs.challenge.general.repository.GeneralBoardRepository;
-import com.ssafy.ChallenMungs.challenge.general.repository.GeneralParticipantRepository;
-
-public class GeneralBoardService {
-
-    private final GeneralBoardRepository generalBoardRepository;
-
-    public GeneralBoardService(GeneralBoardRepository generalBoardRepository) {
-        this.generalBoardRepository = generalBoardRepository;
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3a5223401bd517cedaf79aae85f513568c273db8b736e9d83c5b128426a0c79d
+size 1546
