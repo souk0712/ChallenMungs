@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:31e27204babe128ce8c033f8e531e09e808ff8a6c59520225e059318c4b31f76
-size 344
+package com.ssafy.ChallenMungs.challenge.panel.handler;
+
+import lombok.*;
+import org.springframework.web.socket.WebSocketSession;
+
+import java.util.ArrayList;
+
+@Getter@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class PlayerVo extends ArrayList<PlayerVo> {
+    WebSocketSession session;
+    String loginId;
+    int teamId;
+
+}
