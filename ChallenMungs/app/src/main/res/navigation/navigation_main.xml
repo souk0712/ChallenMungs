@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/navigation_main">
-
-</navigation>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcda0a2ddd079e973103c824d2d11c3604192be3282a2b53a65a89049bc13291
+size 219
