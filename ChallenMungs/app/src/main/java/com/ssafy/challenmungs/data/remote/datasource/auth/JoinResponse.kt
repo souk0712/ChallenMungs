@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce148a5cd31b1c1db03135ef345d8e8882bccc2034bc0df918bb9293b07aeb14
-size 356
+package com.ssafy.challenmungs.data.remote.datasource.auth
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+
+data class JoinResponse(
+    @SerializedName("result")
+    val jwtToken: String
+) : DataToDomainMapper<String> {
+
+    override fun toDomainModel(): String = jwtToken
+}

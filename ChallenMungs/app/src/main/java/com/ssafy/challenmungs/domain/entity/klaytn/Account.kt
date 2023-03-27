@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:72726eba31a4ccfd1d71588782fdccd09a6e4fc221267ce5c71a10bbadbbf202
-size 240
+package com.ssafy.challenmungs.domain.entity.klaytn
+
+data class Account(
+    val address: String,
+    val chainId: Int,
+    val createdAt: Int,
+    val keyId: String,
+    val krn: String,
+    val publicKey: String,
+    val updatedAt: Int
+)
