@@ -1,14 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.treasure.controller;
-
-import io.swagger.annotations.Api;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-@RequestMapping("/challenge")
-@CrossOrigin("*")
-@Api(value = "treasure", description = "보물찾기와 관련된 컨트롤러에요")
-public class TreasureController {
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a6044445454773c767875215e6c2d20bf922678e1c7f69275b18695f6fa17d2
+size 2820
