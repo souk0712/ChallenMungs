@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e3ebdb6fe8329892e32af5ed92b5171acbe2ddd0eae7cc620e0ed1f1f59b1114
-size 466
+package com.ssafy.ChallenMungs.campaign.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.List;
+
+@Getter
+@Setter
+@AllArgsConstructor
+//캠페인 목록 중 하나를 클릭했을 때 보이는 모든 정보들입니다.
+public class CampaignDetailDto {
+    String title;
+    String thumbnail;
+    String writer;
+    int lovecnt;
+    int collectAmount;
+    int targetAmount;
+
+    List<ContentDto> contentList;
+
+
+
+}
