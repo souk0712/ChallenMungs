@@ -1,19 +1,3 @@
-package com.ssafy.ChallenMungs;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-@EnableScheduling
-@SpringBootApplication
-public class ChallenMungsApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ChallenMungsApplication.class, args);
-	}
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:05cedae305b6cfb3330a7bad5c31d03703b8de19eabf7531777eefe27885dbd8
+size 631
