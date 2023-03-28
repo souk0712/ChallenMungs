@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cf4cbba10ac19cc88228ece7f3a22f07e7f2b882fc539ad6fc51d4abe097bbc
-size 483
+package com.ssafy.challenmungs.presentation.mypage
+
+import androidx.fragment.app.Fragment
+import androidx.viewpager2.adapter.FragmentStateAdapter
+
+class MyChallengeListAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {
+
+    override fun getItemCount(): Int = 3
+
+    override fun createFragment(position: Int): Fragment = when (position) {
+        0 -> MyChallengeOngoingFragment()
+        1 -> MyChallengeWaitFragment()
+        else -> MyChallengeFinishFragment()
+    }
+}
