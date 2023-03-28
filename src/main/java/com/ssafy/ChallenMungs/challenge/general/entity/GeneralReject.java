@@ -1,24 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.general.entity;
-
-import lombok.*;
-
-import javax.persistence.*;
-
-@Entity(name="general_reject")
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class GeneralReject {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idx")
-    int idx;
-
-    @Column(name = "login_id")
-    String loginId;
-
-    @Column(name = "board_id")
-    int boardId;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b6cd747b79ef70ff08c94b7658e8aa39703ce1c4631db95e498778ee0206366e
+size 792

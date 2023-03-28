@@ -1,3 +1,9 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7e1fdc23c8ae4dcc26d46e2960b7ca14b77a577bc16b97256dc57ea38fa06b51
-size 603
+package com.ssafy.ChallenMungs.challenge.general.repository;
+
+import com.ssafy.ChallenMungs.challenge.common.entity.MyChallenge;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+
+public interface GeneralParticipantRepository extends JpaRepository<MyChallenge, Long>, QuerydslPredicateExecutor<MyChallenge> {
+
+}
