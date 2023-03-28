@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ebae1c2a8a7f291ca1d3ab548638b0ff0dcdddc2a31d22f05120bce7dbad4cea
-size 300
+package com.ssafy.ChallenMungs.campaign.repository;
+
+import com.ssafy.ChallenMungs.campaign.entity.Comment;
+import com.ssafy.ChallenMungs.campaign.entity.Love;
+import com.ssafy.ChallenMungs.user.entity.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface CommentRepository extends JpaRepository<Comment, Long> {
+
+    List<Comment> findAllByUser(User user);
+
+}
