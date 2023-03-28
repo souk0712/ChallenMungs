@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:526d172349fbaa8efe971acfd7137efbed07e30ebbca41843188bb91eea86c1b
-size 306
+package com.ssafy.ChallenMungs.campaign.dto;
+
+import lombok.*;
+
+import javax.persistence.Column;
+
+@Getter
+@Setter
+@AllArgsConstructor
+//안드에서 캠페인 내용은 블럭으로 관리합니다. 블럭 하나를 나타내는 dto입니다.
+public class ContentDto {
+    String type;
+    String body;
+
+}
