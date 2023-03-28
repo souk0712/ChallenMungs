@@ -1,11 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.general.repository;
-
-import com.ssafy.ChallenMungs.challenge.general.entity.GeneralBoard;
-import com.ssafy.ChallenMungs.challenge.general.entity.GeneralReject;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.querydsl.QuerydslPredicateExecutor;
-
-public interface GeneralRejectRepository extends JpaRepository<GeneralReject, Long>,QuerydslPredicateExecutor<GeneralReject>
-
-    {
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5a6b5d83a44f9af1c4c57374ba934c79ebc0705a656ac46bdedde102bf30fbf
+size 575
