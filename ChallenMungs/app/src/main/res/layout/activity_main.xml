@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c2f5ef6df4e0f6f55ff4b67a5a2f0e850a708906e5cd33827a8a200c50581f8
-size 1474
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</androidx.constraintlayout.widget.ConstraintLayout>
