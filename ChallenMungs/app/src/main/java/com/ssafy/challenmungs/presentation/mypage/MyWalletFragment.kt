@@ -1,12 +1,3 @@
-package com.ssafy.challenmungs.presentation.mypage
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentMyWalletBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-
-class MyWalletFragment : BaseFragment<FragmentMyWalletBinding>(R.layout.fragment_my_wallet) {
-
-    override fun initView() {
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2eb3ca34d948227bcb525b63148ccdef1dfc1c0697d1242a368ac37fd3639ff1
+size 409
