@@ -1,17 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.panel.handler;
-
-import lombok.*;
-
-import java.util.ArrayList;
-
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class ChallengeVo {
-    ArrayList<PlayerVo> players;
-    int [] [] mapInfo;
-    ArrayList<RankVo> rankInfo;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ccaa975a429a10ccb6a1379dd81ccccba16d5443532e6f74f61213be0188df6
+size 293
