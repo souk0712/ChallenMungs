@@ -1,17 +1,3 @@
-package com.ssafy.ChallenMungs.challenge.treasure.handler;
-
-import lombok.*;
-
-import java.util.ArrayList;
-
-@Getter@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
-public class RankVo {
-    Integer teamId;
-    Integer point;
-    Integer teamRank;
-    String loginId;
-    ArrayList<Integer> myTreasureList;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:501df4a841b61774ef6e6c21ea26f419bb167c220efcefb12e8b667d26adcbbd
+size 339

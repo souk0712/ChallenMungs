@@ -1,12 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.service;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-
-public interface WalletService {
-    void insertNomalWallet(String piggyBank,String wallet,String loginId) throws Exception;
-    void insertSpecialWallet(String campaign1, String campaign2,String loginId) throws Exception;
-
-    String getBalance(String address);
-    JsonNode getHistory(String address) throws JsonProcessingException;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:da5aee235dc8c9900e2b4cc4a0fd2cf8c5e98bfc3ffd6074fd26f17ad6a8f0cb
+size 497
