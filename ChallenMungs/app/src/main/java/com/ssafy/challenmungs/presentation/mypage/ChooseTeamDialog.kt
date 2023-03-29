@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7d79ff687bf82ad1f082ab9d2546aa09fc75bf03018efc3f1c62f7b9a26a73cf
-size 429
+package com.ssafy.challenmungs.presentation.mypage
+
+import android.app.Dialog
+import android.content.Context
+import android.os.Bundle
+import com.ssafy.challenmungs.databinding.DialogChooseTeamBinding
+
+class ChooseTeamDialog(context: Context) : Dialog(context) {
+
+    private lateinit var binding: DialogChooseTeamBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+}
