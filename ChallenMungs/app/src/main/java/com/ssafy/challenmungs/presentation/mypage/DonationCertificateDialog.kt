@@ -1,15 +1,3 @@
-package com.ssafy.challenmungs.presentation.mypage
-
-import android.app.Dialog
-import android.content.Context
-import android.os.Bundle
-import com.ssafy.challenmungs.databinding.DialogDonationCertificateBinding
-
-class DonationCertificateDialog(context: Context) : Dialog(context) {
-
-    private lateinit var binding: DialogDonationCertificateBinding
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9844f6fa74134550ba6fec1d053c09d6cc7d15f6b99c0a4f82df39dc8dbbdfb0
+size 456
