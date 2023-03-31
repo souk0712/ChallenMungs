@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:deb80ef20789088b6769a05786b781eac96ee259fbd5916d1b6d8d76a97b11e2
-size 351
+package com.ssafy.challenmungs.domain.entity.challenge
+
+data class ChallengeInfo(
+    val title: String,
+    val category:String,
+    val startDate: String,
+    val endDate: String,
+    val fee: String,
+    val type: String,
+    val centerLat: String,
+    val centerLng: String,
+    val maxParticipantCount: Int,
+    val currentParticipantCount: Int
+)
