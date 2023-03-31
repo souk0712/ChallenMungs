@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d31b0287ce2f0be7259438ec0fe5ec3587cfa383a0de67c0d88e94ccdc283c58
-size 172
+package com.ssafy.challenmungs.domain.entity.bank
+
+data class BankStatement(
+    val content: String,
+    val time: String,
+    val amount: String,
+    val total: String
+)
