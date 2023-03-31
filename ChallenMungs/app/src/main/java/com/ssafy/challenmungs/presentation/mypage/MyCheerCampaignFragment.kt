@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c1a25a0310e8062031479cfdb96a3e63a8c644bd16336cf22119dc96624e9c42
-size 399
+package com.ssafy.challenmungs.presentation.mypage
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.BaseListBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+
+class MyCheerCampaignFragment : BaseFragment<BaseListBinding>(R.layout.base_list) {
+
+    override fun initView() {
+        binding.toolbar.title = getString(R.string.title_cheer_campaign)
+    }
+}
