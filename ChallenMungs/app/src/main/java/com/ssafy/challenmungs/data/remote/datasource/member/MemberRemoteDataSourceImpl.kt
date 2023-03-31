@@ -1,12 +1,3 @@
-package com.ssafy.challenmungs.data.remote.datasource.member
-
-import com.ssafy.challenmungs.data.remote.service.MemberApiService
-import javax.inject.Inject
-
-class MemberRemoteDataSourceImpl @Inject constructor(
-    private val memberApiService: MemberApiService
-) : MemberRemoteDataSource {
-
-    override suspend fun getMemberInfo(): MemberResponse =
-        memberApiService.getMemberInfo()
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:bbd28fb39bf92e78fbf60cf7450f16aa41d99b76f1be4096fe409f4de6e2d2dc
+size 393
