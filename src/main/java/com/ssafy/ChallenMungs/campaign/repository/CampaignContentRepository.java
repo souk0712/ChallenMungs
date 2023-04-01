@@ -1,12 +1,3 @@
-package com.ssafy.ChallenMungs.campaign.repository;
-
-import com.ssafy.ChallenMungs.campaign.entity.Campaign;
-import com.ssafy.ChallenMungs.campaign.entity.Content;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface CampaignContentRepository extends JpaRepository<Content, Long> {
-
-    List <Content>findAllByCampaign(Campaign campaign);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:ce6c999d37f6a8f975a3d03742fb27213bca0f5a81f67210ecc85452bb5c7587
+size 442
