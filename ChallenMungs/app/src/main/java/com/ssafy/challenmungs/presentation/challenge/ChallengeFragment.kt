@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ccefdead9eb0de93b15ee8260b7cde72cd385e4b1c66db21c16f54324fad24c2
-size 351
+package com.ssafy.challenmungs.presentation.challenge
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentChallengeBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+
+class ChallengeFragment : BaseFragment<FragmentChallengeBinding>(R.layout.fragment_challenge) {
+
+    override fun initView() {
+
+    }
+}
