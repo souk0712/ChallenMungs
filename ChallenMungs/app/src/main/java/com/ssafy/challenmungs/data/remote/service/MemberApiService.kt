@@ -1,10 +1,3 @@
-package com.ssafy.challenmungs.data.remote.service
-
-import com.ssafy.challenmungs.data.remote.datasource.member.MemberResponse
-import retrofit2.http.GET
-
-interface MemberApiService {
-
-    @GET("/user/tokenConfirm/getNameAndProfileAndLoginId")
-    suspend fun getMemberInfo(): MemberResponse
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a35c89aeee5d3c77338c9c6680406c47d0e4f81e96a1f9d22046af356b08fdc
+size 645
