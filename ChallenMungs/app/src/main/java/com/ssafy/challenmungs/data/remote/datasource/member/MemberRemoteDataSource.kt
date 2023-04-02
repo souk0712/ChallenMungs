@@ -1,10 +1,3 @@
-package com.ssafy.challenmungs.data.remote.datasource.member
-
-import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
-
-interface MemberRemoteDataSource {
-
-    suspend fun getMemberInfo(): MemberResponse
-
-    suspend fun setWallet(memberId: String, piggyBank: String, wallet: String): ResultResponse
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bb3ae13c913c1114f7f19faae8f624a883c4b90542bcff7dc034673ae690b08
+size 319
