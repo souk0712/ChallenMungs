@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7a1693d5a7ebcc97078735c219e81a7c8642e40bb094d2a29190eb045f54b1ce
-size 334
+package com.ssafy.challenmungs.presentation.donate
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentDonateBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+
+class DonateFragment: BaseFragment<FragmentDonateBinding>(R.layout.fragment_donate) {
+
+    override fun initView() {
+    }
+}
