@@ -1,13 +1,3 @@
-package com.ssafy.challenmungs.presentation.donate
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentDonateBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-import dagger.hilt.android.AndroidEntryPoint
-
-@AndroidEntryPoint
-class DonateFragment: BaseFragment<FragmentDonateBinding>(R.layout.fragment_donate) {
-
-    override fun initView() {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7889731a7ef373608b12f06e883ad603c1936b786a770ea94a21340f75fb8003
+size 1884
