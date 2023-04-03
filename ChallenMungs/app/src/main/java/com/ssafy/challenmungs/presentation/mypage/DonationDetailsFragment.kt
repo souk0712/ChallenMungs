@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3fa13f5702a2bb0ee5afd7005573cf2aac1cb09ef2ae8b14c4f6bce8eaf06f17
-size 441
+package com.ssafy.challenmungs.presentation.mypage
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentDonationDetailsBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class DonationDetailsFragment :
+    BaseFragment<FragmentDonationDetailsBinding>(R.layout.fragment_donation_details) {
+
+    override fun initView() {
+
+    }
+}

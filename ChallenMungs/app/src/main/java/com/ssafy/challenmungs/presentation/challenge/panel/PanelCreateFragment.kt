@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fea38ca1b8b1101f027f731b515f5d0abafdbd73ae247570048240fe0f0527b3
-size 434
+package com.ssafy.challenmungs.presentation.challenge.panel
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentPanelCreateBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class PanelCreateFragment :
+    BaseFragment<FragmentPanelCreateBinding>(R.layout.fragment_panel_create) {
+
+    override fun initView() {
+
+    }
+}
