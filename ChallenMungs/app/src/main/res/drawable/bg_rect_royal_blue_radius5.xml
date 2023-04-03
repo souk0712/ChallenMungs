@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="@color/royal_blue" />
-    <corners android:radius="5dp" />
-</shape>
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bd5c2474f57e143968d1f9fc2ffd6ff19c301292c07d29662ae1ff2d02dd696
+size 193
