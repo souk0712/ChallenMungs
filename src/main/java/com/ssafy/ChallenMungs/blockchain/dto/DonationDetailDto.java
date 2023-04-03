@@ -1,16 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.dto;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-@AllArgsConstructor
-public class DonationDetailDto {
-    String userName;
-    int money;
-    String shelter;
-    String donateDay;
-}
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:5e1b1ac1d69ba442966a1dc5832e689b81a231bd372e66ff0fbf113ec8a00bf6
+size 277
