@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:89d698efaba0bc3305739f59034874c5eb974f2077331c898418901bd3fe671f
-size 355
+package com.ssafy.challenmungs.data.remote.datasource.common
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+
+data class ResultResponse(
+    @SerializedName("result")
+    val result: String
+) : DataToDomainMapper<String> {
+
+    override fun toDomainModel(): String = result
+}
