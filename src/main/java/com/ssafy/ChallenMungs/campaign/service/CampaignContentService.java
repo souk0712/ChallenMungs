@@ -1,19 +1,3 @@
-package com.ssafy.ChallenMungs.campaign.service;
-
-import com.ssafy.ChallenMungs.campaign.dto.CampaignDetailDto;
-import com.ssafy.ChallenMungs.campaign.dto.CampaignInsertDto;
-
-public interface CampaignContentService {
-    void createCampaign(CampaignInsertDto info);
-    void uploadReceipt(String url, int campaignId);
-    boolean isCampaignAble(String loginId);
-
-    int cheerUpCampaign(String loginId, int campaignId);
-    CampaignDetailDto viewDetailCampaign(int campaignId);
-
-
-
-
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e1677c5c23325d2107946151705bb314656dc5bf07ee1bd639789cecaeebd8d
+size 486
