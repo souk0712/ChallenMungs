@@ -1,13 +1,3 @@
-package com.ssafy.challenmungs.data.remote.datasource.auth
-
-import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
-import okhttp3.RequestBody
-
-interface AuthRemoteDataSource {
-
-    suspend fun requestLogin(body: RequestBody): LogInResponse
-
-    suspend fun requestJoin(name: String, accessToken: String): JoinResponse
-
-    suspend fun setWallet(memberId: String, piggyBank: String, wallet: String): ResultResponse
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3fa41bc247031295f8ed8a7c0b93534b0f97e4f12d788a6dcddc18709667a53b
+size 264
