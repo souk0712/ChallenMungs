@@ -1,3 +1,8 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:74f5d1d84a7900406f5a5a8ade252ac6f62af7eb791fffc8609b1fc0f257c823
-size 364
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias libs.plugins.android.application apply false
+    alias libs.plugins.android.library apply false
+    alias libs.plugins.kotlin apply false
+    alias libs.plugins.hilt apply false
+    alias libs.plugins.androidx.navigation.safe.args apply false
+}
