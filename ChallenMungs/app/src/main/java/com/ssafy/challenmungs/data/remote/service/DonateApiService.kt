@@ -1,14 +1,3 @@
-package com.ssafy.challenmungs.data.remote.service
-
-import com.ssafy.challenmungs.data.remote.datasource.donate.CampaignResponse
-import retrofit2.http.GET
-import retrofit2.http.Query
-
-interface DonateApiService {
-
-    @GET("/campaign/list/ongoing")
-    suspend fun getCampaignList(
-        @Query("type") type: String,
-        @Query("sort") sort: Int
-    ): List<CampaignResponse>
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:146681ffe6121e7e14dec044ad0891f8b5ca27693f708400b7441168fb5d0305
+size 383
