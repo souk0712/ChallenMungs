@@ -1,24 +1,3 @@
-package com.ssafy.ChallenMungs.user.entity;
-
-import lombok.*;
-
-import javax.persistence.*;
-
-@Entity(name="code")
-@Builder
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
-public class Code {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @Column(name = "charity_name")
-    private String charityName;
-
-    @Column(name = "invite_code")
-    private String inviteCode;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:187aa80ccd10d8273836f6464f586617b529a511dc3b3cde2213956c1ec43c2a
+size 419

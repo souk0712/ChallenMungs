@@ -1,14 +1,3 @@
-package com.ssafy.ChallenMungs.user.dto;
-
-import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Res1 {
-    @ApiModelProperty(value = "어떤값이 들어오는지 설명", example = "테스트 값", required = true)
-    private String result;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:2713ef96c840b3f325c72bf99cd097c95b2a6873ace9b7453386e169d3b9db76
+size 385
