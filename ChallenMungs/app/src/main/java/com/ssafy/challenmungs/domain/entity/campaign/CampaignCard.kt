@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a4b02e9525f6e02b4a4e10123b3d6f8bccd03e66e22df097bfe9e11e0abfcf67
-size 279
+package com.ssafy.challenmungs.domain.entity.campaign
+
+data class CampaignCard(
+    val campaignId: Int,
+    val bannerUrl: String,
+    val title: String,
+    val charity: String,
+    val cheerCount: String,
+    val progress: Int,
+    val target: Int,
+    val achievement: Int
+)

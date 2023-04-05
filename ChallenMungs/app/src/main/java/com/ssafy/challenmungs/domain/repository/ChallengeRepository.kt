@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5aa7f94cc218df78da4053da681a15855aefd045a45c6a32cb0842c81eabc8e6
-size 357
+package com.ssafy.challenmungs.domain.repository
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.entity.challenge.Challenge
+
+interface ChallengeRepository {
+
+    suspend fun getChallengeList(
+        type: Int,
+        searchValue: String?,
+        lat: Double,
+        lng: Double
+    ): Resource<List<Challenge>>
+}
