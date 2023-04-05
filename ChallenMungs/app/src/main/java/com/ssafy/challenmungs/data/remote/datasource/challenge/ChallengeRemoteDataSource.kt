@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7b2ea6d66015f5b895a4b493fe748d6e46466c09451264fdf0d2733199811da7
-size 258
+package com.ssafy.challenmungs.data.remote.datasource.challenge
+
+interface ChallengeRemoteDataSource {
+
+    suspend fun getChallengeList(
+        type: Int,
+        searchValue: String?,
+        lat: Double,
+        lng: Double
+    ): ChallengeListResponse
+}

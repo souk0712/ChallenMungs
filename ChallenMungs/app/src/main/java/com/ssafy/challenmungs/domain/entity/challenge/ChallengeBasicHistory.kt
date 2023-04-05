@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:020d84c6501bcbde92b7ccf04b34810e84cb93f46adbe29a3d7ebcf4423da943
-size 306
+package com.ssafy.challenmungs.domain.entity.challenge
+
+data class ChallengeBasicHistory(
+    val boardId: Int,
+    val myRejectState: Boolean,
+    val name: String,
+    val pictureUrl: String,
+    val profileUrl: String,
+    val registerDay: String,
+    val rejectResult: Boolean,
+    val user: String,
+)
