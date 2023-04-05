@@ -1,13 +1,3 @@
-package com.ssafy.challenmungs.presentation.donate
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentCampaignInfoBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-import dagger.hilt.android.AndroidEntryPoint
-
-@AndroidEntryPoint
-class CampaignInfoFragment :
-    BaseFragment<FragmentCampaignInfoBinding>(R.layout.fragment_campaign_info) {
-
-    override fun initView() {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a298aad4929c54bb619ea6766e1b7adc6ebfdac925d14d8da5d9b78a0ee09abf
+size 573
