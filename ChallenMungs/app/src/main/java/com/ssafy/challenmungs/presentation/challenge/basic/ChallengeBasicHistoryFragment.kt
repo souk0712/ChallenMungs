@@ -1,11 +1,3 @@
-package com.ssafy.challenmungs.presentation.challenge.basic
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentChallengeBasicHistoryBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-
-class ChallengeBasicHistoryFragment :
-    BaseFragment<FragmentChallengeBasicHistoryBinding>(R.layout.fragment_challenge_basic_history) {
-
-    override fun initView() {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:71b733972bdcde1762b013a5a44ca6aa8fb7d20ee2df1c0374aa7c34d41484ca
+size 6575

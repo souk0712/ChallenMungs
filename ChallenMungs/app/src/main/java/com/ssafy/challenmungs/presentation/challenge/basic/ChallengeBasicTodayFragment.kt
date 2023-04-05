@@ -1,11 +1,3 @@
-package com.ssafy.challenmungs.presentation.challenge.basic
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentChallengeBasicTodayBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-
-class ChallengeBasicTodayFragment :
-    BaseFragment<FragmentChallengeBasicTodayBinding>(R.layout.fragment_challenge_basic_today) {
-
-    override fun initView() {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4a06e019b77fe75ecc68e018b47f53706c802e3ed35f92748c3c6c2bfb7f094
+size 3117
