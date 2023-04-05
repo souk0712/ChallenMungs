@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/bg_rect_gainsboro_radius5" android:state_enabled="false" />
-    <item android:drawable="@drawable/bg_rect_golden_glow_radius5" android:state_enabled="true" />
-</selector>
+version https://git-lfs.github.com/spec/v1
+oid sha256:04e9346b15933b6fb28440a1e8740636a0d3fe3beac800b9c457fd3f5a69ab5f
+size 317
