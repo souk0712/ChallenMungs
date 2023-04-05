@@ -1,11 +1,3 @@
-package com.ssafy.challenmungs.presentation.challenge.basic
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentChallengeBasicInfoBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-
-class ChallengeBasicInfoFragment :
-    BaseFragment<FragmentChallengeBasicInfoBinding>(R.layout.fragment_challenge_basic_info) {
-
-    override fun initView() {}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e3905630810a0debfd64e3e0a1c35ab249003eb1190e80d1a8d203b9fe055e7
+size 1457
