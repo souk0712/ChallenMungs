@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:24944af6f03ece47a67944d2f739c03f38d9298b15619a21b9db1456f0b34ce4
-size 359
+package com.ssafy.ChallenMungs.challenge.panel.handler;
+
+import lombok.*;
+
+import java.util.ArrayList;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class ChallengeVo {
+    ArrayList<PlayerVo> players;
+    int [] [] mapInfo;
+    CoordinateVo [] [] [] mapCoordinate;
+    public ArrayList<RankVo> rankInfo;
+
+    String [] [] belong;
+}
