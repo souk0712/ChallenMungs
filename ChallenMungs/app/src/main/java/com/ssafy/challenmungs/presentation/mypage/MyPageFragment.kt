@@ -1,14 +1,3 @@
-package com.ssafy.challenmungs.presentation.mypage
-
-import com.ssafy.challenmungs.R
-import com.ssafy.challenmungs.databinding.FragmentMyPageBinding
-import com.ssafy.challenmungs.presentation.base.BaseFragment
-import dagger.hilt.android.AndroidEntryPoint
-
-@AndroidEntryPoint
-class MyPageFragment : BaseFragment<FragmentMyPageBinding>(R.layout.fragment_my_page) {
-
-    override fun initView() {
-
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8a566686a1967dae6af35aaf2edc4ff3e83326d8bb86371be587bc5a76e8a5d
+size 1072
