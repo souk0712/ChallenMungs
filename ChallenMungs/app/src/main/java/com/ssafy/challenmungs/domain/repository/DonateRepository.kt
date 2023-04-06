@@ -1,9 +1,3 @@
-package com.ssafy.challenmungs.domain.repository
-
-import com.ssafy.challenmungs.data.remote.Resource
-import com.ssafy.challenmungs.domain.entity.campaign.CampaignCard
-
-interface DonateRepository {
-
-    suspend fun getCampaignList(type: String, sort: Int): Resource<List<CampaignCard>>
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:91210dcb2ca65a9ca424a7a4c2997ec0c27f7c11fa25b92e0a9c06b03f6a11e0
+size 570
