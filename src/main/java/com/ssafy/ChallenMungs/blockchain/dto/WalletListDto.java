@@ -1,16 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.dto;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.util.List;
-
-@Getter
-@Setter
-@AllArgsConstructor
-public class WalletListDto {
-    String day;
-    WalletItemDto item;
-    List<WalletItemDto> itemList;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2c425b491f8434a75d15830cf212f61a952ed0fe00481b08003bb49e2d17a84
+size 268
