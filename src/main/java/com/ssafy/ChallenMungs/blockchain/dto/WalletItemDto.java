@@ -1,18 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.dto;
-
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
-import java.math.BigDecimal;
-
-@Getter
-@Setter
-@AllArgsConstructor
-public class WalletItemDto {
-    String title;
-    BigDecimal amount;
-    String time;
-//    double balance;
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc61fb2e19ad8ea8ec9ce9c31ac5ea21a948b04edee6b0d7c9ef50464624de25
+size 303
