@@ -1,17 +1,3 @@
-package com.ssafy.ChallenMungs.blockchain.repository;
-
-import com.ssafy.ChallenMungs.blockchain.entity.Wallet;
-import com.ssafy.ChallenMungs.user.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.List;
-
-public interface WalletRepository extends JpaRepository<Wallet, Long> {
-
-   List <Wallet> findAllByUser(User user);
-
-   Wallet findByUserAndType(User user,char type);
-
-   Wallet findByAddress(String address);
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:78d379e2e58a34cbe33383b3e49c86b97da77621748d9c5ef259613a05a93900
+size 458

@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-    <solid android:color="@color/festival" />
-</shape>
+version https://git-lfs.github.com/spec/v1
+oid sha256:cc22ed87c1934c2489f1975767ba268c79bfaf4814e3e27f205512eebdf825bf
+size 190

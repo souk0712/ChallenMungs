@@ -1,12 +1,3 @@
-package com.ssafy.challenmungs.domain.entity.campaign
-
-data class Campaign(
-    val title: String,
-    val thumbnail: String,
-    val shelterName: String,
-    val loveCount: Int,
-    val collectAmount: Int,
-    val targetAmount: Int,
-    val achievePercent: Int,
-    val contentList: List<CampaignContent>,
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8641443c068eda8005e0d89ce736c60f43ab370a96593c4b4c5828ad97af7058
+size 309

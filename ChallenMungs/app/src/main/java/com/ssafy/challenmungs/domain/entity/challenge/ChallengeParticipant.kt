@@ -1,15 +1,3 @@
-package com.ssafy.challenmungs.domain.entity.challenge
-
-data class ChallengeParticipant(
-    val title: String,
-    val category: String,
-    val startDate: String,
-    val endDate: String,
-    val fee: String,
-    val type: String,
-    val centerLat: String,
-    val centerLng: String,
-    val maxParticipantCount: Int,
-    val currentParticipantCount: Int,
-    val participant: ArrayList<Participant>,
-)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5080811790486d4519763134623dfd74e1318c3a91055e4bf055f164d0df00ce
+size 405
