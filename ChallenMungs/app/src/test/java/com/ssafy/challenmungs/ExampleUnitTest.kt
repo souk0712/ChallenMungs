@@ -1,17 +1,3 @@
-package com.ssafy.challenmungs
-
-import org.junit.Test
-
-import org.junit.Assert.*
-
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:4b6cbac6f80808aa74fdadaacf90129f01cbf2e8a9a55e7df07f46750ee401ed
+size 346
