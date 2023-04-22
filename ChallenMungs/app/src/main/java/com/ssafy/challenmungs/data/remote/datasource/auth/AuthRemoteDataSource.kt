@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2493d97279f5f2e78ca037089abc8aaacd9ec13781b1cfdfc88d3e0388f6b17c
-size 593
+package com.ssafy.challenmungs.data.remote.datasource.auth
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+import okhttp3.RequestBody
+
+interface AuthRemoteDataSource {
+
+    suspend fun requestLogin(body: RequestBody): LogInResponse
+
+    suspend fun requestJoin(name: String, accessToken: String): JoinResponse
+
+    suspend fun requestShelterJoin(
+        shelterName: String,
+        inviteCode: String,
+        memberId: String,
+        password: String
+    ): ResultResponse
+
+    suspend fun requestInviteCode(shelterName: String, email: String): ResultResponse
+}

@@ -1,3 +1,47 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bb1a3f0c7c5cfc042508adb1f4f04d98c8a6b6230b088775892d06cb12776363
-size 800
+package com.ssafy.ChallenMungs.place.entity;
+
+import lombok.*;
+import software.amazon.ion.Decimal;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Place {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int placeId;
+
+    // 장소 이름
+    @Column(name="name")
+    private String name;
+
+    // 시도 명칭
+    @Column(name="city")
+    private String city;
+
+    // 주소
+    @Column(name="address")
+    private String address;
+
+    // 전화번호
+    @Column(name="number")
+    private String number;
+
+    // 카테고리
+    @Column(name="type")
+    private String type;
+
+    //위도
+    @Column(name="lat")
+    private String lat;
+
+    // 경도
+    @Column(name="lng")
+    private String lng;
+
+}

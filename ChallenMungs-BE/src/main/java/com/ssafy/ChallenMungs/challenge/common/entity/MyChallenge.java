@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:cc88b4708a85c8364b45017f1d16427d5e9be01598743951c57bf82b78b67e91
-size 659
+package com.ssafy.ChallenMungs.challenge.common.entity;
+
+import lombok.*;
+
+import javax.persistence.*;
+
+@Entity(name = "my_challenge")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class MyChallenge {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Long idx;
+
+    @Column(name = "login_id")
+    String loginId;
+
+    @Column(name = "challenge_id")
+    Long challengeId;
+
+    @Column(name = "team_id")
+    Integer teamId;
+
+    @Column(name = "success_count")
+    Integer successCount;
+
+    @Column(name = "success_ratio")
+    Integer successRatio;
+
+    @Column(name = "success_result")
+    Integer successResult;
+
+}

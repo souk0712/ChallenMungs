@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a2f4facaa7b0381a246d1fb2a8d4f2dd26c695dde1d87d380f2989abbbd9851a
-size 1066
+package com.ssafy.challenmungs.data.remote.datasource.auth
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+import com.ssafy.challenmungs.data.remote.service.AuthApiService
+import okhttp3.RequestBody
+import javax.inject.Inject
+
+class AuthRemoteDataSourceImpl @Inject constructor(
+    private val authApiService: AuthApiService
+) : AuthRemoteDataSource {
+
+    override suspend fun requestLogin(body: RequestBody): LogInResponse =
+        authApiService.requestLogin(body)
+
+    override suspend fun requestJoin(name: String, accessToken: String): JoinResponse =
+        authApiService.requestJoin(name, accessToken)
+
+    override suspend fun requestShelterJoin(
+        shelterName: String,
+        inviteCode: String,
+        memberId: String,
+        password: String
+    ): ResultResponse =
+        authApiService.requestShelterJoin(shelterName, inviteCode, memberId, password)
+
+    override suspend fun requestInviteCode(shelterName: String, email: String): ResultResponse =
+        authApiService.requestInviteCode(shelterName, email)
+}

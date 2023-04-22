@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1741fc8e85bade5fb1519a0a18e5080c1c2ed1d0e1b5779bc7e3f4fe69dcf811
-size 1460
+package com.ssafy.challenmungs.data.remote.service
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+import com.ssafy.challenmungs.data.remote.datasource.mypage.BalanceHistoryResponse
+import com.ssafy.challenmungs.data.remote.datasource.mypage.DonationDetailResponse
+import com.ssafy.challenmungs.data.remote.datasource.mypage.DonationSummaryResponse
+import retrofit2.http.GET
+import retrofit2.http.Query
+
+interface MyWalletApiService {
+
+    @GET("/wallet/tokenConfirm/totalDonate")
+    suspend fun getTotalDonate(): ResultResponse
+
+    @GET("/wallet/tokenConfirm/balance")
+    suspend fun getMyWalletBalance(@Query("type") type: String): ResultResponse
+
+    @GET("/wallet/tokenConfirm/myWalletHistory")
+    suspend fun getMyWalletHistory(): List<BalanceHistoryResponse>
+
+    @GET("/wallet/tokenConfirm/myPiggyBankHistory")
+    suspend fun getPiggyBankHistory(): List<BalanceHistoryResponse>
+
+    @GET("/donate/tokenConfirm/donateList")
+    suspend fun getDonationHistory(
+        @Query("loginId") loginId: String,
+        @Query("year") year: Int
+    ): List<BalanceHistoryResponse>
+
+    @GET("/donate/tokenConfirm/donateSummary")
+    suspend fun getDonationSummary(
+        @Query("loginId") loginId: String,
+        @Query("year") year: Int
+    ): DonationSummaryResponse
+
+    @GET("/donate/tokenConfirm/donateDetail")
+    suspend fun getDonationDetail(
+        @Query("donationId") donationId: Int
+    ): DonationDetailResponse
+}

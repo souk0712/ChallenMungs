@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7c97322b8cee34ddec8cc6a89a337efbb2f4a0f33616622748649b8cdbd82962
-size 1129
+package com.ssafy.challenmungs.data.remote.datasource.donate
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.campaign.Campaign
+
+data class CampaignInfoResponse(
+    @SerializedName("title")
+    val title: String,
+    @SerializedName("thumbnail")
+    val thumbnail: String,
+    @SerializedName("writer")
+    val writer: String,
+    @SerializedName("lovecnt")
+    val lovecnt: Int,
+    @SerializedName("collectAmount")
+    val collectAmount: Int,
+    @SerializedName("targetAmount")
+    val targetAmount: Int,
+    @SerializedName("contentList")
+    val contentList: List<CampaignContentResponse>,
+) : DataToDomainMapper<Campaign> {
+
+    override fun toDomainModel(): Campaign = Campaign(
+        title = title,
+        thumbnail = thumbnail,
+        shelterName = writer,
+        loveCount = lovecnt,
+        collectAmount = collectAmount,
+        targetAmount = targetAmount,
+        achievePercent = collectAmount * 100 / targetAmount,
+        contentList = contentList.map { it.toDomainModel() }
+    )
+}

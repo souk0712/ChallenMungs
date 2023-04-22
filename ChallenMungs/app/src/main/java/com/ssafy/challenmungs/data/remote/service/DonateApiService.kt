@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ddc03fd4dee013b8a078db7629deda1fc33f233bfc906b4cd3aeb1c0f84782e6
-size 1069
+package com.ssafy.challenmungs.data.remote.service
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+import com.ssafy.challenmungs.data.remote.datasource.donate.CampaignInfoResponse
+import com.ssafy.challenmungs.data.remote.datasource.donate.CampaignListItemResponse
+import retrofit2.http.GET
+import retrofit2.http.POST
+import retrofit2.http.Query
+
+interface DonateApiService {
+
+    @GET("/campaign/list/ongoing")
+    suspend fun getCampaignList(
+        @Query("type") type: String,
+        @Query("sort") sort: Int
+    ): List<CampaignListItemResponse>
+
+    @GET("/campaign/content/detail")
+    suspend fun getCampaignInfo(
+        @Query("campaignId") campaignId: Int
+    ): CampaignInfoResponse
+
+    @GET("/wallet/tokenConfirm/balance")
+    suspend fun getBalance(
+        @Query("type") type: String
+    ): ResultResponse
+
+    @POST("/donate/tokenConfirm/sponsor")
+    suspend fun requestDonate(
+        @Query("campaignId") campaignId: Int,
+        @Query("money") money: Int,
+        @Query("memo") memo: String,
+    ): ResultResponse
+}

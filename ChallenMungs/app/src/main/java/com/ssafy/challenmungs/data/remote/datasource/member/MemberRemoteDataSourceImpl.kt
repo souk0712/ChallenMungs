@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2fa5d600d4a7fc156ac87d7d53dfaae8a508a4d245438e49caebd4d6b6ec37d1
-size 661
+package com.ssafy.challenmungs.data.remote.datasource.member
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+import com.ssafy.challenmungs.data.remote.service.MemberApiService
+import javax.inject.Inject
+
+class MemberRemoteDataSourceImpl @Inject constructor(
+    private val memberApiService: MemberApiService
+) : MemberRemoteDataSource {
+
+    override suspend fun getMemberInfo(): MemberResponse =
+        memberApiService.getMemberInfo()
+
+    override suspend fun setWallet(
+        memberId: String,
+        piggyBank: String,
+        wallet: String
+    ): ResultResponse = memberApiService.setWallet(memberId, piggyBank, wallet)
+}

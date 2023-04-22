@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e8b8ae8580f7d43284cb938a906fdfefde6d182f1d00051078f22083584e658
-size 602
+package com.ssafy.challenmungs.data.local.datasource
+
+import android.content.Context
+
+class SharedPreferences(context: Context) {
+
+    private val prefs = context.getSharedPreferences("prefs", Context.MODE_PRIVATE)
+
+    var accessToken: String?
+        get() = prefs.getString("accessToken", null)
+        set(value) = prefs.edit().putString("accessToken", value).apply()
+
+    var isFirstRun: Boolean
+        get() = prefs.getBoolean("isFirstRun", true)
+        set(value) = prefs.edit().putBoolean("isFirstRun", value).apply()
+
+    fun clearPreferences() {
+        prefs.edit().clear().apply()
+    }
+}

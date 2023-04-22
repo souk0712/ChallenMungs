@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:11e292254c7f0bcfddf3b40250a2a88170f1de7d3d18838b54a088bf1a9ee351
-size 643
+package com.ssafy.challenmungs.presentation.common
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ssafy.challenmungs.common.util.setImmersiveMode
+import com.ssafy.challenmungs.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setImmersiveMode()
+    }
+}

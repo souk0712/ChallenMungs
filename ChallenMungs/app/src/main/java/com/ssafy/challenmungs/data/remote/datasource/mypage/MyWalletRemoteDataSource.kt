@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6496f5b8d4a38f784bf544cd996ce5237fc06f60bd198fe8643156d1dc55c5d8
-size 710
+package com.ssafy.challenmungs.data.remote.datasource.mypage
+
+import com.ssafy.challenmungs.data.remote.datasource.common.ResultResponse
+
+interface MyWalletRemoteDataSource {
+
+    suspend fun getTotalDonate(): ResultResponse
+
+    suspend fun getMyWalletBalance(type: String): ResultResponse
+
+    suspend fun getMyWalletHistory(): List<BalanceHistoryResponse>
+
+    suspend fun getPiggyBankHistory(): List<BalanceHistoryResponse>
+
+    suspend fun getDonationHistory(
+        loginId: String,
+        year: Int
+    ): List<BalanceHistoryResponse>
+
+    suspend fun getDonationSummary(loginId: String, year: Int): DonationSummaryResponse
+
+    suspend fun getDonationDetail(donationId: Int): DonationDetailResponse
+}

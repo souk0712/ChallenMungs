@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e9617cb9b4b3045b4f9742c75485babb6d594cae8ec13a9cc7265383dafed3eb
-size 1060
+package com.ssafy.ChallenMungs.common.config;
+
+import com.ssafy.ChallenMungs.challenge.panel.handler.PanelSocketHandler;
+import com.ssafy.ChallenMungs.challenge.treasure.handler.TreasureSocketHandler;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.socket.config.annotation.EnableWebSocket;
+import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
+import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
+
+@Configuration
+@EnableWebSocket
+public class SocketConfigurer implements WebSocketConfigurer {
+
+    @Autowired
+    PanelSocketHandler panelSocketHandler;
+
+    @Autowired
+    TreasureSocketHandler treasureSocketHandler;
+
+    @Override
+    public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+        registry.addHandler(panelSocketHandler, "/panelSocket").setAllowedOrigins("*");
+        registry.addHandler(treasureSocketHandler, "/treasureSocket").setAllowedOrigins("*");
+    }
+}

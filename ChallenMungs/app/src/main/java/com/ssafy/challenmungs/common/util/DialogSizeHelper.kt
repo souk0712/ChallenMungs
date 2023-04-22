@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f50dc4df3b335760dfe9ea9101758d13e20b18f81bcd97a85d8fb0c3cd4dfae7
-size 1394
+package com.ssafy.challenmungs.common.util
+
+import android.app.Dialog
+import android.content.Context
+import android.view.WindowManager
+import androidx.fragment.app.DialogFragment
+
+object DialogSizeHelper {
+
+    fun Context.dialogFragmentResize(dialogFragment: DialogFragment, width: Float, height: Float) {
+        val window = dialogFragment.dialog?.window
+        val x = (getDeviceWidthPx(dialogFragment.requireContext()) * width).toInt()
+        val y = (getDeviceHeightPx(dialogFragment.requireContext()) * height).toInt()
+
+        window?.setLayout(x, y)
+    }
+
+    fun Context.dialogFragmentResize(dialogFragment: DialogFragment, width: Float) {
+        val window = dialogFragment.dialog?.window
+        val x = (getDeviceWidthPx(dialogFragment.requireContext()) * width).toInt()
+
+        window?.setLayout(x, WindowManager.LayoutParams.WRAP_CONTENT)
+    }
+
+    fun Context.dialogResize(dialog: Dialog, width: Float, height: Float) {
+        val window = dialog.window
+        val x = (getDeviceWidthPx(dialog.context) * width).toInt()
+        val y = (getDeviceHeightPx(dialog.context) * height).toInt()
+
+        window?.setLayout(x, y)
+    }
+
+    fun Context.dialogResize(dialog: Dialog, width: Float) {
+        val window = dialog.window
+        val x = (getDeviceWidthPx(dialog.context) * width).toInt()
+
+        window?.setLayout(x, WindowManager.LayoutParams.WRAP_CONTENT)
+    }
+}

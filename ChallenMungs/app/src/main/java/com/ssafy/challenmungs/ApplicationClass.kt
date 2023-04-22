@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:944f78aacbc1fff64d24f0091499d4022ba8b8a9698772204e0c301529244f9b
-size 829
+package com.ssafy.challenmungs
+
+import android.app.Application
+import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
+import com.kakao.sdk.common.KakaoSdk
+import com.kakao.sdk.common.util.Utility
+import com.ssafy.challenmungs.data.local.datasource.SharedPreferences
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class ApplicationClass : Application() {
+
+    override fun onCreate() {
+        super.onCreate()
+        preferences = SharedPreferences(applicationContext)
+
+        KakaoSdk.init(this@ApplicationClass, getString(R.string.KAKAO_NATIVE_APP_KEY))
+        Log.d("KaKao-KeyHash", Utility.getKeyHash(this@ApplicationClass))
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    companion object {
+        lateinit var preferences: SharedPreferences
+    }
+}

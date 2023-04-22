@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c912a257501fd205d35e98d09ea35c7b9e0ff07af9e5b253b5ed3742cfda326
-size 851
+package com.ssafy.challenmungs.data.remote.datasource.challenge.basic
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.challenge.ChallengeBasicToday
+
+data class ChallengeBasicTodayResponse(
+    @SerializedName("boardId")
+    val boardId: Int,
+    @SerializedName("myRejectState")
+    val myRejectState: Boolean,
+    @SerializedName("name")
+    val name: String,
+    @SerializedName("pictureUrl")
+    val pictureUrl: String,
+    @SerializedName("profileUrl")
+    val profileUrl: String,
+    @SerializedName("user")
+    val user: String,
+) : DataToDomainMapper<ChallengeBasicToday> {
+
+    override fun toDomainModel(): ChallengeBasicToday =
+        ChallengeBasicToday(boardId, myRejectState, user, name, profileUrl, pictureUrl)
+}

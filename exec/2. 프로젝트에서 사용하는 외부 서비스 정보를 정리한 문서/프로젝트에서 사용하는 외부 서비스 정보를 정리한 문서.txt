@@ -1,3 +1,10 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:10c8be401c9e273e6db646c609dbf5755e351a452e1117bb4be176764c28d83b
-size 628
+1. Kakao Login : https://developers.kakao.com/docs/latest/ko/kakaologin/rest-api
+2. 구글 maps : https://dnpersons.com/info_guide/?idx=6614990&bmode=view
+3. docker : https://docs.docker.com/get-started/overview/
+4. jenkins : https://www.jenkins.io/doc/book/pipeline/
+5. figma : https://designer-story.tistory.com/38
+6. workbench : https://dev-taerin.tistory.com/13 
+7. nginx : https://juneyr.dev/nginx-basics
+8. Jira : https://www.atlassian.com/ko/software/jira/guides/workflows/overview#what-is-a-jira-workflow
+9. gitlab : https://insight.infograb.net/guide/
+10. klayton Api : https://www.klaytnapi.com/ko/resource/docs/readme

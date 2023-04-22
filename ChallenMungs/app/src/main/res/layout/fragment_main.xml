@@ -1,3 +1,54 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:740b9154726adcab722cee5ea583e3f0ff74bfa13578f39ac1db8cb140e45ee8
-size 1941
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.common.MainFragment">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_home"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/ll_menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/navigation_home" />
+
+        <LinearLayout
+            android:id="@+id/ll_menu"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <include
+                android:id="@+id/tab_challenge"
+                layout="@layout/item_bottom_menu" />
+
+            <include
+                android:id="@+id/tab_donate"
+                layout="@layout/item_bottom_menu" />
+
+            <include
+                android:id="@+id/tab_home"
+                layout="@layout/item_bottom_menu" />
+
+            <include
+                android:id="@+id/tab_map"
+                layout="@layout/item_bottom_menu" />
+
+            <include
+                android:id="@+id/tab_my_page"
+                layout="@layout/item_bottom_menu" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

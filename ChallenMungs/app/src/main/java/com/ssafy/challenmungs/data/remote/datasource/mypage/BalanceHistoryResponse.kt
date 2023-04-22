@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:4e4f6e167d434ba4178852ed13b442b3d670c2f347a1d133e54a4fa656519f93
-size 575
+package com.ssafy.challenmungs.data.remote.datasource.mypage
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.mypage.BalanceHistory
+
+data class BalanceHistoryResponse(
+    @SerializedName("date")
+    val date: String,
+    @SerializedName("items")
+    val details: List<BalanceDetailResponse>,
+) : DataToDomainMapper<BalanceHistory> {
+
+    override fun toDomainModel(): BalanceHistory =
+        BalanceHistory(date, details.map { it.toDomainModel() })
+}

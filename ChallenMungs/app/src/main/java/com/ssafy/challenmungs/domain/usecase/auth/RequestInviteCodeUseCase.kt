@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9988012e6041ec05690a1a5eeec00358ab4351f861d538119bad1c9bafd67b70
-size 616
+package com.ssafy.challenmungs.domain.usecase.auth
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.AuthRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class RequestInviteCodeUseCase @Inject constructor(
+    private val authRepository: AuthRepository
+) {
+    suspend operator fun invoke(shelterName: String, email: String): Resource<String> =
+        withContext(Dispatchers.IO) {
+            authRepository.requestInviteCode(shelterName, email)
+        }
+}

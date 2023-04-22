@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:556ac0b0b3b4c319c67cb20f60b31766773f6f772bc90e44012e384f17c1eb22
-size 611
+package com.ssafy.ChallenMungs.common.util;
+
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+public class SHA256 {
+
+    public String encrypt(String text) throws NoSuchAlgorithmException {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        md.update(text.getBytes());
+
+        return bytesToHex(md.digest());
+    }
+
+    private String bytesToHex(byte[] bytes) {
+        StringBuilder builder = new StringBuilder();
+        for (byte b : bytes) {
+            builder.append(String.format("%02x", b));
+        }
+        return builder.toString();
+    }
+
+}

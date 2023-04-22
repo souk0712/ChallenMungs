@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fbcaeea9f87173eef348e8e2bbd64a1e2e281a419e7ce3df37fc531619819df8
-size 983
+package com.ssafy.challenmungs.data.remote.datasource.klaytn
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.klaytn.Account
+
+data class AccountResponse(
+    @SerializedName("address")
+    val address: String,
+    @SerializedName("chainId")
+    val chainId: Int,
+    @SerializedName("createdAt")
+    val createdAt: Int,
+    @SerializedName("keyId")
+    val keyId: String,
+    @SerializedName("krn")
+    val krn: String,
+    @SerializedName("publicKey")
+    val publicKey: String,
+    @SerializedName("updatedAt")
+    val updatedAt: Int
+) : DataToDomainMapper<Account> {
+
+    override fun toDomainModel(): Account =
+        Account(
+            address = address,
+            chainId = chainId,
+            createdAt = createdAt,
+            keyId = keyId,
+            krn = krn,
+            publicKey = publicKey,
+            updatedAt = updatedAt
+        )
+}

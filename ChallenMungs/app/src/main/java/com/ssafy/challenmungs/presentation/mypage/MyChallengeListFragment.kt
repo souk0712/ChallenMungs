@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6f775ae27ad7e86bbd091db745e8a41d30eba6601a2b77fdcadfdb737824d75a
-size 1190
+package com.ssafy.challenmungs.presentation.mypage
+
+import androidx.fragment.app.activityViewModels
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentMyChallengeListBinding
+import com.ssafy.challenmungs.domain.entity.challenge.Challenge
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+import com.ssafy.challenmungs.presentation.challenge.ChallengeViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MyChallengeListFragment(
+    private val position: Int, private val dataList: ArrayList<Challenge>
+) : BaseFragment<FragmentMyChallengeListBinding>(R.layout.fragment_my_challenge_list) {
+
+    private val challengeViewModel by activityViewModels<ChallengeViewModel>()
+
+    override fun initView() {
+        binding.rvList.adapter =
+            MyChallengeListAdapter(position, dataList, challengeViewModel)
+
+        observe()
+    }
+
+    private fun observe() {
+        challengeViewModel.basicTodayList.observe(viewLifecycleOwner) {
+            it?.let {
+                navigationNavHostFragmentToDestinationFragment(
+                    R.id.challenge_basic_fragment
+                )
+            }
+        }
+    }
+}

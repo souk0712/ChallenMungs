@@ -1,3 +1,30 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b9405bdb0bd34862ba785e075133d7c551c5b7ba2e9ba71b07a3da836c4beea6
-size 678
+package com.ssafy.ChallenMungs.campaign.entity;
+
+import com.ssafy.ChallenMungs.user.entity.User;
+import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@Table(name = "receipt")
+public class Receipt {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int receiptId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="campaign_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Campaign campaign;
+
+    @Column(name = "receipt", length = 2500)
+    private String receipt;
+
+}

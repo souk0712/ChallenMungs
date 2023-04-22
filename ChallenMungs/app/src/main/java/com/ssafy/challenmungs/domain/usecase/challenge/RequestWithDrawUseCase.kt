@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:630dff740d2316b8bd8f94f7adb59894add7407fc13da8308e62b3328345340d
-size 597
+package com.ssafy.challenmungs.domain.usecase.challenge
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.ChallengeRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class RequestWithDrawUseCase @Inject constructor(
+    private val challengeRepository: ChallengeRepository
+) {
+    suspend operator fun invoke(challengeId: Long): Resource<String> = withContext(Dispatchers.IO) {
+        challengeRepository.requestWithDraw(challengeId)
+    }
+}

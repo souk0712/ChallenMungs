@@ -1,3 +1,26 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:fdba6686c75c632c8b99c17c4e64d1144224db954110986f800560e35aeedc75
-size 654
+package com.ssafy.ChallenMungs.challenge.general.dto;
+
+import com.ssafy.ChallenMungs.campaign.dto.ContentDto;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import org.joda.time.LocalDateTime;
+
+import java.time.LocalDate;
+import java.util.List;
+
+@Getter
+@Setter
+@AllArgsConstructor
+// 오늘 생성된 일반챌린지 목록을 정보들을 담은 dto 입니다.
+public class GeneralBoardTodayDto {
+    private Integer boardId;
+    private String user;
+    private String name;
+    private String profileUrl;
+    private String pictureUrl;
+    private Boolean myRejectState;
+
+
+//    List<GeneralBoardTodayDto> todayList;
+}

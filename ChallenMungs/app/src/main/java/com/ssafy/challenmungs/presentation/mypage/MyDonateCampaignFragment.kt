@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:21017ac2de2a2712c8ee651261db29f5ba8d958c81cfce9e994654d0444dd45c
-size 602
+package com.ssafy.challenmungs.presentation.mypage
+
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.BaseListBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+
+class MyDonateCampaignFragment : BaseFragment<BaseListBinding>(R.layout.base_list) {
+
+    override fun initView() {
+        setBind()
+        initListener()
+    }
+
+    private fun setBind() {
+        binding.toolbar.title = getString(R.string.title_my_campaign)
+    }
+
+    private fun initListener() {
+        binding.toolbar.ivBack.setOnClickListener {
+            popBackStack()
+        }
+    }
+}

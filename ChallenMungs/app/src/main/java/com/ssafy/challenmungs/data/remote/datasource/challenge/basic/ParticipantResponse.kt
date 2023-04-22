@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:032916793fd003ca202bf5b73f29336dd325cef63dcdddbd3ecf50faf668ceb2
-size 520
+package com.ssafy.challenmungs.data.remote.datasource.challenge.basic
+
+import com.google.gson.annotations.SerializedName
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.challenge.Participant
+
+data class ParticipantResponse(
+    @SerializedName("profile")
+    val profile: String?,
+    @SerializedName("name")
+    val name: String,
+) : DataToDomainMapper<Participant> {
+
+    override fun toDomainModel(): Participant = Participant(profile, name)
+}

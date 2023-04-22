@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1b414028bddd7f4befbfe5e7e1d99dbb8e7256de14e8483df5c3b49f7b33be17
-size 608
+package com.ssafy.challenmungs.domain.usecase.member
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.entity.member.Member
+import com.ssafy.challenmungs.domain.repository.MemberRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class GetMemberInfoUseCase @Inject constructor(
+    private val memberRepository: MemberRepository
+) {
+    suspend operator fun invoke(): Resource<Member> = withContext(Dispatchers.IO) {
+        memberRepository.getMemberInfo()
+    }
+}

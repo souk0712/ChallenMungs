@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ffa21ae22389107c07a644bf002fa7dceff9416142a61afb3b9ad558825da934
-size 630
+package com.ssafy.challenmungs.domain.usecase.donate
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.DonateRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class RequestDonateUseCase @Inject constructor(
+    private val donateRepository: DonateRepository
+) {
+    suspend operator fun invoke(campaignId: Int, money: Int, memo: String): Resource<String> =
+        withContext(Dispatchers.IO) {
+            donateRepository.requestDonate(campaignId, money, memo)
+        }
+}

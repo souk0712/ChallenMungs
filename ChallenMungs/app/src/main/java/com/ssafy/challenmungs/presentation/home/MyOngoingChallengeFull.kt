@@ -1,3 +1,48 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8ff84f089f290753cf6c37124ae7cf4ea6b4cacb8409e7a50a5e301c73bf7eea
-size 1791
+package com.ssafy.challenmungs.presentation.home
+
+import android.text.Layout
+import android.view.Gravity
+import android.view.View
+import androidx.navigation.fragment.navArgs
+import androidx.recyclerview.widget.GridLayoutManager
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentMyOngoingChallengeFullBinding
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+import com.ssafy.challenmungs.presentation.information.InformationPlaceListFragmentArgs
+import org.json.JSONArray
+
+class MyOngoingChallengeFull : BaseFragment<FragmentMyOngoingChallengeFullBinding>(R.layout.fragment_my_ongoing_challenge_full) {
+
+    override fun initView() {
+        val args: InformationPlaceListFragmentArgs by navArgs()
+        val cardList = args.cardList
+
+        binding.toolbar.title = "진행중인 챌린지"
+        binding.toolbar.ivBack.setOnClickListener {
+            popBackStack()
+        }
+        val rv = binding.recyclerView
+        val jsonArray = JSONArray(cardList)
+
+        if (jsonArray.length() > 0) {
+            val list = mutableListOf<Map<String, Any>>()
+
+            for (i in 0 until jsonArray.length()) {
+                val jsonObj = jsonArray.getJSONObject(i)
+                val map = mutableMapOf<String, Any>()
+                val keys = jsonObj.keys()
+
+                while (keys.hasNext()) {
+                    val key = keys.next()
+                    val value = jsonObj.get(key)
+                    map.put(key, value)
+                }
+                list.add(map)
+            }
+            rv.adapter = MyOngoingChallengeFullAdapter(list)
+            rv.layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL, false)
+        } else {
+            binding.llNoAlert.visibility = View.VISIBLE
+        }
+    }
+}

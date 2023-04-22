@@ -1,3 +1,41 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:bc317c4bb46c4cd5aa15688cf99046c72e5ccfe661d9b5f5764c055c80b2516b
-size 842
+package com.ssafy.challenmungs.domain.entity.challenge
+
+// 보내는 부분
+// 산책시작하기
+data class PanelStartSend(
+    val event: String,
+    val data: PanelStartDataSend,
+)
+
+data class PanelStartDataSend(
+    val challengeId: Long,
+    val loginId: String,
+)
+
+// 누군가가 판넬을 뒤집음
+data class PanelRevertSend(
+    val event: String,
+    val data: PanelRevertDataSend,
+)
+
+data class PanelRevertDataSend(
+    val lat: Double,
+    val lng: Double,
+    val challengeId: Long,
+    val loginId: String,
+)
+
+// 받는 부분
+// 누군가가 판넬을 뒤집음
+data class PanelRevertResponse(
+    val code: String,
+    val value: PanelRevertDataResponse,
+)
+
+data class PanelRevertDataResponse(
+    val indexC: Int,
+    val indexR: Int,
+    val rankInfo: ArrayList<RankDetail>,
+    val teamId: Int,
+    val teamDraw: Boolean
+)

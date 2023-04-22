@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9c2f8f5dcef7eb3854fc23144812925ab8923675965506c6aa6c20cc3c629624
-size 584
+package com.ssafy.challenmungs.domain.usecase.challenge
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.ChallengeRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class RequestRejectUseCase @Inject constructor(
+    private val challengeRepository: ChallengeRepository
+) {
+    suspend operator fun invoke(boardId: Int): Resource<String> = withContext(Dispatchers.IO) {
+        challengeRepository.requestReject(boardId)
+    }
+}

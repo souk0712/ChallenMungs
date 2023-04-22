@@ -1,3 +1,40 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:dd73b416dbebccdefe8311ae22ad00d16937a95533581f75dd7d72fb4b0f0de2
-size 1125
+package com.ssafy.challenmungs.domain.usecase.challenge
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.PanelRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class CreatePanelChallengeUseCase @Inject constructor(
+    private val panelRepository: PanelRepository
+) {
+    suspend operator fun invoke(
+        title: String,
+        startDate: String,
+        endDate: String,
+        maxParticipantCount: Int,
+        gameType: Int,
+        entryFee: Int,
+        centerLat: Double,
+        centerLng: Double,
+        mapSize: Double,
+        cellSize: Double,
+    ): Resource<String> =
+        withContext(Dispatchers.IO) {
+            panelRepository.createPanelChallenge(
+                title,
+                startDate,
+                endDate,
+                maxParticipantCount,
+                gameType,
+                entryFee,
+                centerLat,
+                centerLng,
+                mapSize,
+                cellSize
+            )
+        }
+}

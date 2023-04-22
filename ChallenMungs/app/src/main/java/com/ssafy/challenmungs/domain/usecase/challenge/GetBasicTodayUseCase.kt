@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:13996d39c24e78875b9948d7888f3be56703cf33c7fafe89ab5fd3ffb23cdd0d
-size 701
+package com.ssafy.challenmungs.domain.usecase.challenge
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.entity.challenge.ChallengeBasicToday
+import com.ssafy.challenmungs.domain.repository.ChallengeRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class GetBasicTodayUseCase @Inject constructor(
+    private val challengeRepository: ChallengeRepository
+) {
+    suspend operator fun invoke(challengeId: Int): Resource<List<ChallengeBasicToday>> =
+        withContext(Dispatchers.IO) {
+            challengeRepository.getBasicToday(challengeId)
+        }
+}

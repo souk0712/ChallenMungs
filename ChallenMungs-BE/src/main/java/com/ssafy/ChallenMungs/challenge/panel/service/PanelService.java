@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:353db426828451a6c2e40221e2a8f42ba648bbb07c92aa11af64bea41dd360d9
-size 554
+package com.ssafy.ChallenMungs.challenge.panel.service;
+
+import com.ssafy.ChallenMungs.challenge.common.entity.Challenge;
+import com.ssafy.ChallenMungs.challenge.panel.repository.PanelRepositoryForChallenge;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class PanelService {
+    @Autowired
+    PanelRepositoryForChallenge panelRepositoryForChallenge;
+
+    public Long save(Challenge build) {
+        return panelRepositoryForChallenge.save(build).getChallengeId();
+    }
+}

@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ab0328b6edf013291d8c7ab5195b0a8f5e14790e0903beeb25f9d8c4eb0905b9
-size 601
+package com.ssafy.challenmungs.common.util
+
+import android.content.Context
+import android.util.AttributeSet
+import android.widget.FrameLayout
+
+class SquareFrameLayout : FrameLayout {
+
+    constructor(context: Context?) : super(context!!)
+    constructor(context: Context?, attrs: AttributeSet) : super(context!!, attrs)
+    constructor(context: Context?, attrs: AttributeSet, defStyle: Int) : super(
+        context!!,
+        attrs,
+        defStyle
+    )
+
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
+        super.onMeasure(widthMeasureSpec, widthMeasureSpec)
+    }
+}

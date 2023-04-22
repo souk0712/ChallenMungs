@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ceffae16fc2644f590dde59089fff11ffae1d65b6a66b0ffea210b85e5295f2b
-size 640
+package com.ssafy.challenmungs.domain.usecase.mypage
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.entity.mypage.DonationDetail
+import com.ssafy.challenmungs.domain.repository.MyWalletRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+
+class GetDonationDetailUseCase @Inject constructor(
+    private val myWalletRepository: MyWalletRepository
+) {
+    suspend operator fun invoke(donationId: Int): Resource<DonationDetail> =
+        withContext(Dispatchers.IO) {
+            myWalletRepository.getDonationDetail(donationId)
+        }
+}

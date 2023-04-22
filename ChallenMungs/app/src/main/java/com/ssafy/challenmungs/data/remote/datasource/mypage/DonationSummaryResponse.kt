@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b4e4a78c72df71a11a426785ce6dc27ae5f3d30ae30a48fe716093185398a43f
-size 553
+package com.ssafy.challenmungs.data.remote.datasource.mypage
+
+import com.ssafy.challenmungs.data.remote.datasource.base.DataToDomainMapper
+import com.ssafy.challenmungs.domain.entity.mypage.DonationSummary
+
+data class DonationSummaryResponse(
+    val donateCount: Int,
+    val sumYearMoney: Int,
+    val sumTotalMoney: Int,
+) : DataToDomainMapper<DonationSummary> {
+
+    override fun toDomainModel(): DonationSummary = DonationSummary(
+        donateCount = donateCount,
+        sumYearMoney = sumYearMoney,
+        sumTotalMoney = sumTotalMoney
+    )
+}

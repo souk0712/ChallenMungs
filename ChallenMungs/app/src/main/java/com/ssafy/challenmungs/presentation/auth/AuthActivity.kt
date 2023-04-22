@@ -1,3 +1,20 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:abbe6a6324f9a9e3b3c38684f783afd45cbf0dfb650daff47b29aea0b75e210b
-size 641
+package com.ssafy.challenmungs.presentation.auth
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.ssafy.challenmungs.common.util.setImmersiveMode
+import com.ssafy.challenmungs.databinding.ActivityAuthBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class AuthActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityAuthBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityAuthBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        setImmersiveMode()
+    }
+}

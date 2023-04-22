@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1ff286bd19614fd426f5c17747f56b89e252d5bad387bd6164c3ae82c7acb2ca
-size 790
+package com.ssafy.ChallenMungs.challenge.common.repository;
+
+import com.ssafy.ChallenMungs.challenge.common.entity.Challenge;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public interface ChallengeRepository extends JpaRepository<Challenge, Long>, QuerydslPredicateExecutor<Challenge> {
+    List<Challenge> findAllByChallengeType(int i);
+
+    List<Challenge> findAllByTitleLike(String s);
+
+    List<Challenge> findAllByTitleLikeAndChallengeType(String s, int i);
+
+    Challenge findByChallengeId(Long challengeId);
+
+    List<Challenge> findAllByStatusAndChallengeType(int status, int challengeType);
+
+    ArrayList<Challenge> findAllByStatus(int i);
+}

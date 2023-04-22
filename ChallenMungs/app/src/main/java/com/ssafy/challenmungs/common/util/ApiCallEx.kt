@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:61e85fce2871789dd32d48cd38c1f34f935814b090fb4a767acd207a15c87106
-size 752
+package com.ssafy.challenmungs.common.util
+
+import com.ssafy.challenmungs.data.remote.Resource
+import kotlinx.coroutines.CoroutineDispatcher
+import retrofit2.HttpException
+import java.io.IOException
+
+suspend fun <T> wrapToResource(dispatcher: CoroutineDispatcher, apiCall: suspend () -> T): Resource<T> {
+    return try {
+        Resource.Success(apiCall())
+    } catch (throwable: Throwable) {
+        when(throwable) {
+            is IOException -> Resource.Error(throwable.message ?: "ERROR1")
+            is HttpException -> {
+                val code = throwable.code()
+                Resource.Error(code.toString())
+            }
+            else -> {
+                Resource.Error(throwable.message ?: "ERROR2")
+            }
+        }
+    }
+}

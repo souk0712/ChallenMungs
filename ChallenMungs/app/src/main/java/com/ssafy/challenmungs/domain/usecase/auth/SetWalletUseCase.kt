@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3f3d4cd8a6a544846413445c4fd567becd60d87468ca6a335dd307fbeaa8e8a3
-size 664
+package com.ssafy.challenmungs.domain.usecase.auth
+
+import com.ssafy.challenmungs.data.remote.Resource
+import com.ssafy.challenmungs.domain.repository.MemberRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import javax.inject.Inject
+import javax.inject.Singleton
+
+@Singleton
+class SetWalletUseCase @Inject constructor(
+    private val memberRepository: MemberRepository
+) {
+    suspend operator fun invoke(
+        memberId: String,
+        piggyBank: String,
+        wallet: String
+    ): Resource<String> =
+        withContext(Dispatchers.IO) {
+            memberRepository.setWallet(memberId, piggyBank, wallet)
+        }
+}

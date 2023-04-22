@@ -1,3 +1,31 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2fceee802b8876fee93862c44b336ab01bf329e7df19ff02568983d08d7fd150
-size 1009
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="content"
+            type="com.ssafy.challenmungs.domain.entity.campaign.CampaignContent" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end|top"
+            android:paddingHorizontal="18dp"
+            android:text="@{content.body}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

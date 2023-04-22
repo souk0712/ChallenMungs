@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:444fb02a2c2cbead2ad641329cdc5f34572a08043539203284538a4c1b8e50f5
-size 1315
+package com.ssafy.challenmungs.presentation.shelter
+
+import androidx.fragment.app.activityViewModels
+import com.ssafy.challenmungs.ApplicationClass
+import com.ssafy.challenmungs.R
+import com.ssafy.challenmungs.databinding.FragmentShelterHomeBinding
+import com.ssafy.challenmungs.presentation.auth.MemberViewModel
+import com.ssafy.challenmungs.presentation.base.BaseFragment
+import com.ssafy.challenmungs.presentation.common.CustomSimpleDialog
+import com.ssafy.challenmungs.presentation.common.CustomSimpleDialogInterface
+
+class ShelterHomeFragment :
+    BaseFragment<FragmentShelterHomeBinding>(R.layout.fragment_shelter_home),
+    CustomSimpleDialogInterface {
+
+    private val memberViewModel by activityViewModels<MemberViewModel>()
+
+    override fun initView() {
+        memberViewModel.memberInfo.value?.let {
+            binding.member = it
+        }
+
+        binding.tvLogout.setOnClickListener {
+            val dialog = CustomSimpleDialog(
+                requireContext(),
+                this@ShelterHomeFragment,
+                false,
+                "로그아웃 하시겠어요?",
+                "확인"
+            )
+            dialog.show()
+        }
+    }
+
+    override fun onPositiveButton() {
+        ApplicationClass.preferences.clearPreferences()
+        requireActivity().finish()
+    }
+}
